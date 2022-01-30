@@ -8,6 +8,9 @@ ENV \
     NVIDIA_DRIVER_CAPABILITIES="compute,video,utility" \
     NVIDIA_VISIBLE_DEVICES="all"
 
+# Compile Unmanic
+RUN rm -rfv ./build && rm -fv ./dist/unmanic-*
+RUN python3 ./setup.py sdist bdist_wheel
 
 # Install the runtime dependencies
 # TODO: Remove intel-opencl-icd and replace with suggested build by Jellyfin
