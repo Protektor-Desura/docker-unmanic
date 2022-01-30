@@ -12,5 +12,5 @@ python3 ./setup.py sdist bdist_wheel
 ### Building the image
 Simply run this command from the root of the project:
 ```bash
-docker build -f ./docker/Dockerfile -t josh5/unmanic:latest .
+docker build -f ./docker/Dockerfile -t archon/unmanic:latest .
 ```
